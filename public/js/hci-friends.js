@@ -3,8 +3,14 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$(".friends h3 a").click(clickFxn);
 })
 
+function clickFxn() {
+	//event.preventDefault();
+	var name = $(this).text();
+	$(this).text(anagrammedName(name));
+}
 /*
  * Function that is called when the document is ready.
  */
